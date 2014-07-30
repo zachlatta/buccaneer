@@ -1,6 +1,6 @@
 # Buccaneer
 
-Buccaneer is a one-stop seedbox built with Docker.
+Buccaneer is a single-command seedbox built with Docker.
 
 ## License
 
