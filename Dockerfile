@@ -4,6 +4,8 @@ MAINTAINER Zach Latta <zach@zachlatta.com>
 # General
 RUN apt-get -y update
 VOLUME /data
+VOLUME /log
+ADD start.sh /bin/start.sh
 
 # SickRage
 RUN apt-get -y install python python-cheetah git
@@ -16,4 +18,6 @@ RUN mkdir /data/sickbeard && \
   ln -s sickbeard.db /data/sickbeard/
 WORKDIR /app/sickrage
 EXPOSE 8081
-CMD ["python", "SickBeard.py"]
+
+# Initialization
+CMD ["bash", "/bin/start.sh"]
