@@ -12,9 +12,6 @@ ADD https://github.com/echel0n/SickRage/archive/master.tar.gz \
   /app/sickrage.tar.gz
 RUN tar xzf /app/sickrage.tar.gz -C /app && \
   mv /app/SickRage-master /app/sickrage && rm /app/sickrage.tar.gz
-RUN mkdir /data/sickbeard && \
-  ln -s config.ini /data/sickbeard/ && \
-  ln -s sickbeard.db /data/sickbeard/
 EXPOSE 8081
 
 # Deluge

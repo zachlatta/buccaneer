@@ -1,6 +1,15 @@
 #!/bin/bash
 
 # SickRage
+mkdir -p /data/sickrage
+if [ ! -f /data/sickrage/config.ini ]; then
+  mv /app/sickrage/config.ini /data/sickrage/config.ini
+fi
+if [ ! -f /data/sickrage/sickbeard.db ]; then
+  mv /app/sickrage/sickbeard.db /data/sickrage/sickbeard.db
+fi
+ln -nsf /data/sickrage/sickbeard.db /app/sickrage/sickbeard.db
+ln -nsf /data/sickrage/config.ini /app/sickrage/config.ini
 python /app/sickrage/SickBeard.py >> /log/sickrage &
 
 # Deluge
