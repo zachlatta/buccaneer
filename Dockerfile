@@ -12,6 +12,7 @@ ADD https://github.com/echel0n/SickRage/archive/master.tar.gz \
   /app/sickrage.tar.gz
 RUN tar xzf /app/sickrage.tar.gz -C /app && \
   mv /app/SickRage-master /app/sickrage && rm /app/sickrage.tar.gz
+ADD sickrage/config.ini /app/sickrage/config.ini
 EXPOSE 8081
 
 # Deluge
