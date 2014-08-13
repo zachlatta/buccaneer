@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# General
+mkdir -p /data/media /data/media/tv
+
 # SickRage
 mkdir -p /data/sickrage
 if [ ! -f /data/sickrage/config.ini ]; then
